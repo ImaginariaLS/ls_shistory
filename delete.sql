@@ -1,1 +1,1 @@
-DROP TABLE `prefix_shistory` ;
+DROP TABLE `prefix_shistory`;
