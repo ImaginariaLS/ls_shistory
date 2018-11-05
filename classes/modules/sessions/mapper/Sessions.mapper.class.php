@@ -52,14 +52,14 @@ class PluginSHistory_ModuleSessions_MapperSessions extends Mapper
                 {$table_shistory} ii
             ORDER BY 
                 id DESC
-            LIMIT ?
+            LIMIT ?d
         ) i2
         ON      
             i1.id = i2.id
         WHERE   
             i2.id IS NULL
-        AND `user_id` = ?
-        ORDER BY id DESC 
+        AND `user_id` = ?d
+         
         ";
         $this->oDb->query($sql, Config::Get('shistoryLimit'), $user_id);
 
