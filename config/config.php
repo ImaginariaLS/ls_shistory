@@ -17,4 +17,8 @@ Config::Set('router.page.sessions', 'PluginSHistory_ActionSessions');
 
 Config::Set('db.table.shistory', '___db.table.prefix___shistory');
 
+$config['hook_priority'] = [
+    'template_menu_settings_settings_item'     =>  -10,
+];
+
 return $config;
